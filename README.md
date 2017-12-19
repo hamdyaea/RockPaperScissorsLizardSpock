@@ -69,7 +69,7 @@ sudo apt-get install python3-tk
 ## How to launch this software :  
 
 ```sh
-LizardSpock.py
+python3 LizardSpock.py
 ```  
 
 
