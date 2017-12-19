@@ -89,8 +89,8 @@ def paper():
     elif comp == 4:
         comp = "Spock"
         sheldon_score += 1
-        messagebox.showinfo("Unlucky!",
-                            "YOU LOOSE!\nPaper disproves Spock \n" + "Your Choice: Paper\n" + "\nSheldon's Choice: " + comp + "\nYour Score: " + str(
+        messagebox.showinfo("Congratulation!",
+                            "YOU WIN!\nPaper disproves Spock \n" + "Your Choice: Paper\n" + "\nSheldon's Choice: " + comp + "\nYour Score: " + str(
                                 user_score) + "\nSheldon's Score: " + str(sheldon_score))
 
 
