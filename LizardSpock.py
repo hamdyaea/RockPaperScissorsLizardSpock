@@ -70,7 +70,7 @@ def paper():
         comp = "Rock"
         user_score += 1
         messagebox.showinfo("Congratulation!",
-                            "YOU WIN!\nPaper covers Rock \n" + "Your Choice: Pape\nr" + "\nSheldon's Choice: " + comp + "\nYour Score: " + str(
+                            "YOU WIN!\nPaper covers Rock \n" + "Your Choice: Paper\n" + "\nSheldon's Choice: " + comp + "\nYour Score: " + str(
                                 user_score) + "\nSheldon's Score: " + str(sheldon_score))
 
     elif comp == 2:
