@@ -1,4 +1,5 @@
 # Rock Paper Scissors Lizard Spock  
+![Awesome](awesome.svg) ![Python](python.png)
 
 ![Screenshot](sheldonFull.gif)
 
