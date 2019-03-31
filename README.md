@@ -49,6 +49,12 @@ The game is an expansion on the game Rock, Paper, Scissors. Each player picks a 
 ![Screenshot](screenshot1.png)
 
 
+## Download the Windows .exe version :
+
+You can run it with Python 3 and the right libraries or for Windows you can use the .exe software that I created there :
+
+[![Download Rock Paper Scissors Lizard Spock](https://img.shields.io/sourceforge/dm/rock-paper-scissors-spock.svg)](https://sourceforge.net/projects/rock-paper-scissors-spock/files/latest/download)
+[![Download Rock Paper Scissors Lizard Spock](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/rock-paper-scissors-spock/files/latest/download)
 
 ## What you need to make it work :  
 
