@@ -14,6 +14,14 @@ The game was originally created by Sam Kass with Karen Bryla. According to an in
 
 sources for informations and rules: http://bigbangtheory.wikia.com/wiki/Rock_Paper_Scissors_Lizard_Spock
 
+## Download the Windows .exe version :
+
+You can run it with Python 3 and the right libraries or for Windows you can use the .exe software that I created there :
+
+[![Download Rock Paper Scissors Lizard Spock](https://img.shields.io/sourceforge/dm/rock-paper-scissors-spock.svg)](https://sourceforge.net/projects/rock-paper-scissors-spock/files/latest/download)
+[![Download Rock Paper Scissors Lizard Spock](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/rock-paper-scissors-spock/files/latest/download)
+
+
 ## Rules of the game  
 
 ![Screenshot](rules.jpg)
@@ -47,14 +55,6 @@ The game is an expansion on the game Rock, Paper, Scissors. Each player picks a 
 
 ![Screenshot](screenshot.png)  
 ![Screenshot](screenshot1.png)
-
-
-## Download the Windows .exe version :
-
-You can run it with Python 3 and the right libraries or for Windows you can use the .exe software that I created there :
-
-[![Download Rock Paper Scissors Lizard Spock](https://img.shields.io/sourceforge/dm/rock-paper-scissors-spock.svg)](https://sourceforge.net/projects/rock-paper-scissors-spock/files/latest/download)
-[![Download Rock Paper Scissors Lizard Spock](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/rock-paper-scissors-spock/files/latest/download)
 
 ## What you need to make it work :  
 
