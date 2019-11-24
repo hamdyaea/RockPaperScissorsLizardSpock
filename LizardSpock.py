@@ -1,4 +1,7 @@
+#!/usr/bin/env python3
+
 # Developer : Hamdy Abou El Anein
+# hamdy.aea@protonmail.com
 
 import tkinter as tk
 import tkinter
@@ -6,416 +9,419 @@ from tkinter import messagebox
 import random
 
 
+class Game:
+    def __ini__(self):
+        self.ciseaux_tk
+        self.caillou_tk
+        self.feuille_tk
+        self.lizard_tk
+        self.spock_tk
+        self.user_score
+        self.sheldon_score
+        self.comp
+
+
 top = tk.Tk()
 top.title("Rock - Paper - Scissors - Lizard - Spock")
 
-ciseaux_tk = tk.PhotoImage(file="./images/scissors.gif")
-caillou_tk = tk.PhotoImage(file="./images/rock.gif")
-feuille_tk = tk.PhotoImage(file="./images/paper.gif")
-lizard_tk = tk.PhotoImage(file="./images/lizard.gif")
-spock_tk = tk.PhotoImage(file="./images/spock.gif")
+Game.ciseaux_tk = tk.PhotoImage(file="./images/scissors.gif")
+Game.caillou_tk = tk.PhotoImage(file="./images/rock.gif")
+Game.feuille_tk = tk.PhotoImage(file="./images/paper.gif")
+Game.lizard_tk = tk.PhotoImage(file="./images/lizard.gif")
+Game.spock_tk = tk.PhotoImage(file="./images/spock.gif")
 
-
-user_score = 0
-sheldon_score = 0
+Game.sheldon_score = 0
+Game.user_score = 0
 
 
 def Rock():
-    global user_score, sheldon_score
-
-    comp = random.randint(1, 5)
-
-    if comp == 3:
-        comp = "Scissors"
-        user_score += 1
+    Game.comp = random.randint(1, 5)
+    if Game.comp == 3:
+        Game.comp = "Scissors"
+        Game.user_score += 1
         messagebox.showinfo(
             "Congratulation!",
             "YOU WIN!\nRock crushes Scissors \n"
             + "Your Choice:Rock\n"
             + "\nSheldon's Choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
-    elif comp == 1:
-        comp = "Rock"
+    elif Game.comp == 1:
+        Game.comp = "Rock"
         messagebox.showinfo(
             "Same choice!",
             "EGUALITY!\n"
             + "Your Choice:Rock\n"
             + "\nSheldon's Choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
-    elif comp == 2:
-        comp = "Lizard"
-        user_score += 1
+    elif Game.comp == 2:
+        Game.comp = "Lizard"
+        Game.user_score += 1
         messagebox.showinfo(
             "Congratulation!",
             "YOU WIN!\nRock crushes Lizard \n"
             + "Your Choice:Rock\n"
             + "\nSheldon's Choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
-    elif comp == 4:
-        comp = "Spock"
-        sheldon_score += 1
+    elif Game.comp == 4:
+        Game.comp = "Spock"
+        Game.sheldon_score += 1
         messagebox.showinfo(
             "Unlucky!",
-            "YOU LOOSE! \nSpock vaporizes Rock \n"
+            "YOU LOSE! \nSpock vaporizes Rock \n"
             + "Your Choice:Rock\n"
             + "\nSheldon's Choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
     else:
-        comp = "Paper"
-        sheldon_score += 1
+        Game.comp = "Paper"
+        Game.sheldon_score += 1
         messagebox.showinfo(
             "Unlucky!",
-            "YOU LOOSE!\nPaper covers Rock \n"
+            "YOU LOSE!\nPaper covers Rock \n"
             + "Your Choice:Rock\n"
             + "\nSheldon's Choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
 
 def paper():
-    global user_score, sheldon_score
-
-    comp = random.randint(1, 5)
-
-    if comp == 1:
-        comp = "Rock"
-        user_score += 1
+    Game.comp = random.randint(1, 5)
+    if Game.comp == 1:
+        Game.comp = "Rock"
+        Game.user_score += 1
         messagebox.showinfo(
             "Congratulation!",
             "YOU WIN!\nPaper covers Rock \n"
             + "Your Choice: Paper\n"
             + "\nSheldon's Choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
-    elif comp == 2:
-        comp = "Paper"
+    elif Game.comp == 2:
+        Game.comp = "Paper"
         messagebox.showinfo(
             "Same choice!",
             "EGUALITY!\n"
             + "Your Choice: Paper\n"
             + "\nSheldon's Choice:"
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
-    elif comp == 3:
-        comp = "Lizard"
-        sheldon_score += 1
+    elif Game.comp == 3:
+        Game.comp = "Lizard"
+        Game.sheldon_score += 1
         messagebox.showinfo(
             "Unlucky!",
-            "YOU LOOSE!\nLizard eats Paper\n"
+            "YOU LOSE!\nLizard eats Paper\n"
             + "Your Choice: Paper\n"
             + "\nSheldon's Choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
-    elif comp == 4:
-        comp = "Spock"
-        sheldon_score += 1
+    elif Game.comp == 4:
+        Game.comp = "Spock"
+        Game.user_score += 1
         messagebox.showinfo(
             "Congratulation!",
             "YOU WIN!\nPaper disproves Spock \n"
             + "Your Choice: Paper\n"
             + "\nSheldon's Choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
     else:
-        comp = "Scissors"
-        sheldon_score += 1
+        Game.comp = "Scissors"
+        Game.sheldon_score += 1
         messagebox.showinfo(
             "Unlucky!",
-            "YOU LOOSE!\nScissors cuts Paper \n"
+            "YOU LOSE!\nScissors cuts Paper \n"
             + "Your Choice: Paper\n"
             + "\nSheldon's Choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
 
 def scissors():
-    global user_score, sheldon_score
-
-    comp = random.randint(1, 5)
-
-    if comp == 2:
-        comp = "Paper"
-        user_score += 1
+    Game.comp = random.randint(1, 5)
+    if Game.comp == 2:
+        Game.comp = "Paper"
+        Game.user_score += 1
         messagebox.showinfo(
             "Congratulation!",
             "YOU WIN!\nScissors cuts Paper \nYour Choice: Scissors\n"
             + "\nSheldon's choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
-    elif comp == 3:
-        comp = "Scissors"
+    elif Game.comp == 3:
+        Game.comp = "Scissors"
         messagebox.showinfo(
             "Same choice!",
             "EGUALITY!\nYour Choice: Scissors\n"
             + "\nSheldon's choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
-    elif comp == 1:
-        comp = "Lizard"
-        user_score += 1
+    elif Game.comp == 1:
+        Game.comp = "Lizard"
+        Game.user_score += 1
         messagebox.showinfo(
             "Congratulation!",
             "YOU WIN!\nScissors decapitates Lizard \n"
             + "Your Choice:Scissors\n"
             + "\nSheldon's Choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
-    elif comp == 4:
-        comp = "Spock"
-        sheldon_score += 1
+    elif Game.comp == 4:
+        Game.comp = "Spock"
+        Game.sheldon_score += 1
         messagebox.showinfo(
             "Unlucky!",
-            "YOU LOOSE!\nSpock smashes Scissors \n"
+            "YOU LOSE!\nSpock smashes Scissors \n"
             + "Your Choice:Scissors\n"
             + "\nSheldon's Choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
     else:
-        comp = "Rock"
-        sheldon_score += 1
+        Game.comp = "Rock"
+        Game.sheldon_score += 1
         messagebox.showinfo(
             "Unlucky!",
-            "YOU LOOSE!\nRock crushes Scissors \nYour Choice: Scissors\n"
+            "YOU LOSE!\nRock crushes Scissors \nYour Choice: Scissors\n"
             + "\nSheldon's choice:"
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
 
 def lizard():
-    global user_score, sheldon_score
-
-    comp = random.randint(1, 5)
-
-    if comp == 2:
-        comp = "Paper"
-        user_score += 1
+    Game.comp = random.randint(1, 5)
+    if Game.comp == 2:
+        Game.comp = "Paper"
+        Game.user_score += 1
         messagebox.showinfo(
             "Congratulation!",
             "YOU WIN!\nLizard eats Paper \nYour Choice: Lizard\n"
             + "\nSheldon's choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
-    elif comp == 3:
-        comp = "Scissors"
-        sheldon_score += 1
+    elif Game.comp == 3:
+        Game.comp = "Scissors"
+        Game.sheldon_score += 1
         messagebox.showinfo(
             "Unlucky!",
-            "YOU LOOSE!\nScissors decapitates Lizard \nYour Choice: Lizard\n"
+            "YOU LOSE!\nScissors decapitates Lizard \nYour Choice: Lizard\n"
             + "\nSheldon's choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
-    elif comp == 1:
-        comp = "Lizard"
+    elif Game.comp == 1:
+        Game.comp = "Lizard"
         messagebox.showinfo(
             "Same choice!",
             "EGUALITY!\n"
             + "Your Choice: Lizard\n"
             + "\nSheldon's Choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
-    elif comp == 4:
-        comp = "Spock"
-        user_score += 1
+    elif Game.comp == 4:
+        Game.comp = "Spock"
+        Game.user_score += 1
         messagebox.showinfo(
             "Congratulation!",
             "YOU WIN!\nLizard poisons Spock \n"
             + "Your Choice:Lizard\n"
             + "\nSheldon's Choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
     else:
-        comp = "Rock"
-        sheldon_score += 1
+        Game.comp = "Rock"
+        Game.sheldon_score += 1
         messagebox.showinfo(
             "Unlucky!",
-            "YOU LOOSE!\nRock crushes Lizard \nYour Choice: Lizard\n"
+            "YOU LOSE!\nRock crushes Lizard \nYour Choice: Lizard\n"
             + "\nSheldon's choice:"
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
 
 def spock():
-    global user_score, sheldon_score
+    Game.comp = random.randint(1, 5)
 
-    comp = random.randint(1, 5)
-
-    if comp == 2:
-        comp = "Paper"
-        sheldon_score += 1
+    if Game.comp == 2:
+        Game.comp = "Paper"
+        Game.sheldon_score += 1
         messagebox.showinfo(
             "Unlucky!",
-            "YOU LOOSE!\nPaper disproves Spock \nYour Choice: Spock\n"
+            "YOU LOSE!\nPaper disproves Spock \nYour Choice: Spock\n"
             + "\nSheldon's choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
-    elif comp == 3:
-        comp = "Scissors"
-        user_score += 1
+    elif Game.comp == 3:
+        Game.comp = "Scissors"
+        Game.user_score += 1
         messagebox.showinfo(
             "Congratulation!",
             "YOU WIN !\nSpock smashes Scissors \nYour Choice: Spock\n"
             + "\nSheldon's choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
-    elif comp == 1:
-        comp = "Lizard"
-        sheldon_score += 1
+    elif Game.comp == 1:
+        Game.comp = "Lizard"
+        Game.sheldon_score += 1
         messagebox.showinfo(
             "Unlucky!",
-            "YOU LOOSE!\nLizard poisons Spock \n"
+            "YOU LOSE!\nLizard poisons Spock \n"
             + "Your Choice: Spock\n"
             + "\nSheldon's Choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
-    elif comp == 4:
-        comp = "Spock"
+    elif Game.comp == 4:
+        Game.comp = "Spock"
         messagebox.showinfo(
             "Same choice!",
             "EGUALITY!\n"
             + "Your Choice: Spock\n"
             + "\nSheldon's Choice: "
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
     else:
-        comp = "Rock"
-        user_score += 1
+        Game.comp = "Rock"
+        Game.user_score += 1
         messagebox.showinfo(
             "Congratulation!",
             "YOU WIN!\nSpock vaporizes Rock \nYour Choice: Spock\n"
             + "\nSheldon's choice:"
-            + comp
+            + Game.comp
             + "\nYour Score: "
-            + str(user_score)
+            + str(Game.user_score)
             + "\nSheldon's Score: "
-            + str(sheldon_score),
+            + str(Game.sheldon_score),
         )
 
 
-B1 = tkinter.Button(top, image=caillou_tk, height="300", width="280", command=Rock)
-B2 = tkinter.Button(top, image=feuille_tk, height="300", width="280", command=paper)
-B3 = tkinter.Button(top, image=ciseaux_tk, height="300", width="280", command=scissors)
-B4 = tkinter.Button(top, image=lizard_tk, height="300", width="280", command=lizard)
-B5 = tkinter.Button(top, image=spock_tk, height="300", width="280", command=spock)
+B1 = tkinter.Button(top, image=Game.caillou_tk, height="300", width="280", command=Rock)
+B2 = tkinter.Button(
+    top, image=Game.feuille_tk, height="300", width="280", command=paper
+)
+B3 = tkinter.Button(
+    top, image=Game.ciseaux_tk, height="300", width="280", command=scissors
+)
+B4 = tkinter.Button(
+    top, image=Game.lizard_tk, height="300", width="280", command=lizard
+)
+B5 = tkinter.Button(top, image=Game.spock_tk, height="300", width="280", command=spock)
 
 B1.pack(side="left")
 B2.pack(side="left")
