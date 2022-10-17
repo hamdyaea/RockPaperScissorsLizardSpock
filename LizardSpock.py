@@ -411,7 +411,9 @@ def spock():
         )
 
 
-B1 = tkinter.Button(top, image=Game.caillou_tk, height="300", width="280", command=Rock)
+B1 = tkinter.Button(
+    top, image=Game.caillou_tk, height="300", width="280", command=Rock
+)
 B2 = tkinter.Button(
     top, image=Game.feuille_tk, height="300", width="280", command=paper
 )
@@ -421,7 +423,9 @@ B3 = tkinter.Button(
 B4 = tkinter.Button(
     top, image=Game.lizard_tk, height="300", width="280", command=lizard
 )
-B5 = tkinter.Button(top, image=Game.spock_tk, height="300", width="280", command=spock)
+B5 = tkinter.Button(
+    top, image=Game.spock_tk, height="300", width="280", command=spock
+)
 
 B1.pack(side="left")
 B2.pack(side="left")
